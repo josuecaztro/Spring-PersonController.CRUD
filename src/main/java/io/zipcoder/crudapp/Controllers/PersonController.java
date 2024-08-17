@@ -32,13 +32,11 @@ public class PersonController {
     @GetMapping(value = "/persons")
     public ResponseEntity<Iterable<Person>> getPersonList(){
         return new ResponseEntity<>(service.getPersonList(), HttpStatus.OK);
-
     }
 
     @PutMapping(value = "/persons/{id}")
     public ResponseEntity<Person> updatePerson (@PathVariable("id")Integer id, Person p){
         return new ResponseEntity<>(service.updatePerson(id, p), HttpStatus.OK);
-
     }
 
     public ResponseEntity<Boolean> deletePerson (@PathVariable("id") int id){

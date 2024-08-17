@@ -9,7 +9,6 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class CRUDApplication {
 
-	//test
 
 	public static void main(String[] args) {
 		SpringApplication.run(CRUDApplication.class, args);
