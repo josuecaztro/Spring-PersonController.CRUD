@@ -35,6 +35,7 @@ public class PersonService {
     public Person updatePerson (Integer id, Person p){
         Person originalPerson = repository.findOne(id);
         originalPerson.setFirstName(p.getFirstName());
+        originalPerson.setLastName(p.getLastName());
         return repository.save(originalPerson);
     }
 
